@@ -31,7 +31,7 @@ class Display:
     def instructions():
         print("Scope ready...")
         print("{}<{}Shift{}> up/down".format(GRAY, CYAN, GRAY))
-        print("<{}Q{}> to quit{}".format(CYAN, GRAY, RESET))
+        print("<{}Q{}> to quit{}\n".format(CYAN, GRAY, RESET))
     
 class SetWindow:
     
@@ -199,12 +199,16 @@ class QuickScope:
                     break
                     cv2.destroyAllWindows() 
 
-
+new_location = []
+reset = False
 if len(sys.argv) > 1:
-    if sys.argv[1].lower() == "-reset":
-        reset = True
-else:
-    reset = False
+    for arg in range(0, len(sys.argv[1:])):
+        if sys.argv[arg].lower() == "-reset":
+            reset = True
+        elif sys.argv[arg].lower() == "-output":
+            if arg+1 < len(sys.argv[1:]):
+                new_location = eval(sys.argv[arg+1])
+        
     
-gimmeTheScope = QuickScope(reset=reset)
+gimmeTheScope = QuickScope(reset=reset, scope_location=new_location)
 gimmeTheScope.now()
