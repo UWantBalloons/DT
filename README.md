@@ -3,7 +3,9 @@ DT_scope
 An add-on scope for Downtown 1930s Mafia.
 https://www.crazygames.com/game/downtown-1930s-mafia
 
-USE WITH BROWSER AT 150%.
+- USE WITH BROWSER AT 150%.
+
+- MADE TO WORK on WINDOWS OS only. Sorry.
 
 Run:  scope.py 
   - will run through a quick setup and a coord.json file will be added to the directory and the scope will become active.
