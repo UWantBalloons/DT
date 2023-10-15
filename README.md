@@ -10,8 +10,8 @@ https://www.crazygames.com/game/downtown-1930s-mafia
 Run:  scope.py 
   - will run through a quick setup and a coord.json file will be added to the directory and the scope will become active.
 
-  - Press <shift> to bring scope up/down.
-  - Press <Q> to quit
+  - Press SHIFT to bring scope up/down.
+  - Press Q to quit
 
 Run:  scope.py -reset
   - to set up crosshair alignment again
